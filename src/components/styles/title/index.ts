@@ -5,5 +5,6 @@ export const Title = styled.h1`
      color: ${theme.colors.white};
      margin-top: 0;
      text-align: center;
+    
   `}
 `

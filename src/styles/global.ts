@@ -6,11 +6,12 @@ export default createGlobalStyle `
         height: 100%;
 
      body {
+        background: ${theme.colors.background};
         display: flex;
         flex-direction: column;
         height: 100%;
         margin: 0;
-        background: ${theme.colors.background};
+        
 
         #root {
             color: ${theme.colors.black};

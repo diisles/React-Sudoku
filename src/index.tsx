@@ -13,11 +13,13 @@ ReactDOM.render(
     <GlobalStyles/>
     <Content data-cy="content">
     <Title data-cy="title">Sudoku</Title>
-    </Content>
+    
   
-    <Card data-cy="card">test
+    <Card data-cy="card">
+       <Grid />
     </Card>
-    <Grid />
+    </Content>
+    
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
