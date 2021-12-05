@@ -1,6 +1,6 @@
 /**
- * an array shuffling function using the Fisher - Yates shuffle algorithm 
- * @param array an array that you want shuffled
+ * An array shuffling function using the Fisher - Yates shuffle algorithm 
+ * @param array An array that you want shuffled
  */
 function shuffle(array: any[]) {
     for (let i = array.length - 1; i > 0; i--) {
