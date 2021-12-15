@@ -1,24 +1,18 @@
-import React, { Children, FC } from 'react'
+import React, { Children, FC, useCallback, useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { AnyAction, Dispatch } from 'redux'
 
-import { GRID } from 'typings'
-import { fillGrid } from 'utils'
+import { createFullGrid } from 'utils'
+import { createGrid } from 'reducers'
 import Block from './block'
 import { Container, Row } from './styles'
 
 const Grid: FC = () => {
-    const grid: GRID = [
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0, 0, 0, 0]
-    ]
-    fillGrid(grid)
-    console.log(grid)
+    const dispatch = useDispatch<Dispatch<AnyAction>>()
+    const create =useCallback(() => dispatch(createGrid()), [dispatch])
+    useEffect(() => {
+        create()
+    }, [create])
 
 return (
     <Container data-cy="grid-container">
