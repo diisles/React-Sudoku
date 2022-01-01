@@ -25,8 +25,8 @@ function reducer(state = initialState, action: AnyAction): IReducer {
         case types.FILL_BLOCK: {
 
             if (state.workingGrid && state.solvedGrid) {
-                if (state.solvedGrid[action.coord[0]][action.coords[1]] !== action.value) {
-                    alert('Incorrect Action!')
+                if (state.solvedGrid[action.coords[0]][action.coords[1]] !== action.value) {
+                    alert('Nope Nope Nope!')
                     return state
                 }
                 state.workingGrid[action.coords[0]][action.coords[1]] = action.value
@@ -47,4 +47,4 @@ function reducer(state = initialState, action: AnyAction): IReducer {
     }
 }
 
-export default reducer
+export default reducer 
