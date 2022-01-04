@@ -5,7 +5,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 import { ThemeProvider } from 'styled-components';
 
 import { Card, Content, Grid, NewButton, Numbers, Title  } from './components';
-import { configureStore, unregister } from './core';
+import { configureStore, unregister, register } from './core';
 import { GlobalStyles, theme } from './styles';
 
 const { persistor, store } = configureStore()
